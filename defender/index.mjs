@@ -21,6 +21,7 @@ const corsOptions = {
     allowedHeaders: 'Content-Type,custom-header'
 };
 
+// Requires for complex requests.
 app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
@@ -39,7 +40,6 @@ app.get('/', (req, res) => {
     res.send('Cookie set!');
 });
 
-app.options('/get', cors(corsOptions)) // enable pre-flight request
 app.get('/get', (req, res) => {
     res.json({
         cookies: req.cookies,
@@ -47,7 +47,6 @@ app.get('/get', (req, res) => {
     });
 });
 
-app.options('/post', cors(corsOptions)) // enable pre-flight request
 app.post('/post', (req, res) => {
     res.json({
         cookies: req.cookies,
