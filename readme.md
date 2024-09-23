@@ -1,3 +1,7 @@
+## What is this?
+
+[![Video showing cross site scripting](http://img.youtube.com/vi/uiNkXxWoh2w/0.jpg)](http://www.youtube.com/watch?v=uiNkXxWoh2w "Video showing cross site scripting")
+
 ## How to run
 
 ### Setup
