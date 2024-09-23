@@ -15,12 +15,25 @@ Requirements for that are:
 
 - the cookie on defender.local must be set with `SameSite: none` and `Secure` in order for simple requests to work
 
-Complex AJAX requests:
+Simple AJAX request with cookies, but blocked by the browser:
 
 - the requesting domain must specify `credentials: 'include'` (if using the Fetch API)
-- the responding domain must respond the headers `Access-Control-Allow-Origin: https://attacker.local` and `Access-Control-Allow-Credentials: true`
 
 Note that simple AJAX requests will still be performed even if the responding domain doesn't have the headers set. However, because the simple request occurs without CORS preflight, the receiving server will still receive the request, but the user's browser will block the request after it has seen that the headers are missing.
+
+Simple AJAX request with cookies, not blocked:
+
+- the responding domain must respond the headers `Access-Control-Allow-Origin: https://attacker.local` and `Access-Control-Allow-Credentials: true`
+
+Complex AJAX requests with cookies, but blocked with the browser:
+
+- the requesting domain should force a complex request with a non-standard header, e.g. ` 'custom-header': 'value'`
+
+Complex AJAX requests with cookies, not blocked:
+
+- same as a simple AJAX request (not blocked)
+- the responding domain must respond the header `Access-Control-Allow-Headers: custom-header`
+
 
 ## How to run
 
