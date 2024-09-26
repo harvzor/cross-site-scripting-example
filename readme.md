@@ -48,17 +48,18 @@ The hosts file needs these inputs:
 
 Requirements:
 
-- Node v18.20.2
+- deno 2.0.0-rc.5
 
 ### The attacker
 
 ```
-npm install http-server -g
-http-server -p 443 -a attacker.local --ssl
+cd attacker
+deno run --allow-net --allow-read --watch .\main.ts
 ```
 
 ### The defender
 
 ```
-node index.mjs
+cd defender
+deno run --allow-net --allow-read --watch .\main.ts
 ```
