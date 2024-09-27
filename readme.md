@@ -63,3 +63,13 @@ deno run --allow-net --allow-read --watch .\main.ts
 cd defender
 deno run --allow-net --allow-read --watch .\main.ts
 ```
+
+## Testing
+
+There are integration tests which require the server to be running, so run first.
+
+Then:
+
+```
+deno test --allow-net --unsafely-ignore-certificate-errors
+```
