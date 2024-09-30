@@ -2,8 +2,6 @@
 
 This repo shows how simple and complex cross domain requests can be made to include the target domain's cookies.
 
-[![Video showing cross site scripting](http://img.youtube.com/vi/uiNkXxWoh2w/0.jpg)](http://www.youtube.com/watch?v=uiNkXxWoh2w "Video showing cross site scripting")
-
 There are two websites run from this repo:
 
 - attacker.local
