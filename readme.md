@@ -59,7 +59,7 @@ deno run --allow-net --allow-read --watch .\main.ts
 
 ```
 cd defender
-deno run --allow-net --allow-read --watch .\main.ts
+deno run --allow-net --allow-read --allow-env --watch .\main.ts
 ```
 
 ## Testing

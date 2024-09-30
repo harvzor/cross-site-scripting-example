@@ -31,7 +31,7 @@ describe("Integration test", () => {
             expect(setCookie.path).toBe('/');
             expect(setCookie.expires).toBeDefined(); // Can't check the date exactly.
             expect(setCookie.domain).toBe(`.${domain}`);
-            expect(setCookie.sameSite).toBe('none');
+            expect(setCookie.sameSite?.toLowerCase()).toBe('none');
             expect(setCookie.secure).toBe(true);
         });
     });
