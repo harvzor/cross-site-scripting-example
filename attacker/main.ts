@@ -1,23 +1,25 @@
-import {Application, Router} from "@oak/oak";
+import { NestFactory } from '@nestjs/core';
+import { Get, Module, Controller } from '@nestjs/common';
+import '@nestjs/platform-express';
 
-const router = new Router();
-
-router.get("/", (context) => {
-  context.response.body = Deno.readTextFileSync("./index.html");
-});
-
-const app = new Application();
 const port = 443;
 const hostname = 'attacker.local';
 
-app.use(router.routes());
-app.use(router.allowedMethods());
-console.log(`Server running on https://${hostname}`);
+@Controller()
+class RootController {
+  @Get('/')
+  Get() {
+    return Deno.readTextFileSync("./index.html")
+  }
+}
 
-app.listen({
-  port: port,
-  hostname: hostname,
-  secure: true,
-  cert: Deno.readTextFileSync("./certs/cert.pem"),
-  key: Deno.readTextFileSync("./certs/key.pem"),
+@Module({ controllers: [RootController] })
+class AppModule {}
+const app = await NestFactory.create(AppModule, {
+  httpsOptions: {
+    key: Deno.readTextFileSync("./certs/key.pem"),
+    cert: Deno.readTextFileSync("./certs/cert.pem"),
+  }
 });
+
+app.listen(port, hostname);
