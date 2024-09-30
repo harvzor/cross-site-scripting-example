@@ -52,7 +52,7 @@ Requirements:
 
 ```
 cd attacker
-deno run --allow-net --allow-read --watch .\main.ts
+deno run --allow-net --allow-read --allow-env --watch .\main.ts
 ```
 
 ### The defender
