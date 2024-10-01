@@ -22,7 +22,6 @@
     "jsr:@std/streams@^1.0.6": "1.0.6",
     "jsr:@std/testing@*": "1.0.3",
     "jsr:@std/testing@^1.0.3": "1.0.3",
-    "jsr:@tajpouria/cors@^1.2.1": "1.2.1",
     "npm:@nestjs/common@^10.4.4": "10.4.4_reflect-metadata@0.2.2_rxjs@7.8.1",
     "npm:@nestjs/core@^10.4.4": "10.4.4_@nestjs+common@10.4.4__reflect-metadata@0.2.2__rxjs@7.8.1_reflect-metadata@0.2.2_rxjs@7.8.1",
     "npm:@nestjs/platform-express@^10.4.4": "10.4.4_@nestjs+common@10.4.4__reflect-metadata@0.2.2__rxjs@7.8.1_@nestjs+core@10.4.4__@nestjs+common@10.4.4___reflect-metadata@0.2.2___rxjs@7.8.1__reflect-metadata@0.2.2__rxjs@7.8.1",
@@ -97,9 +96,6 @@
         "jsr:@std/internal",
         "jsr:@std/path@^1.0.6"
       ]
-    },
-    "@tajpouria/cors@1.2.1": {
-      "integrity": "eca42e4fb7cb3906ef0ee3d1e565dd6bb4632ccd8e70a95cf4279759743328f0"
     }
   },
   "npm": {
@@ -804,7 +800,6 @@
       "jsr:@std/expect@^1.0.4",
       "jsr:@std/http@^1.0.7",
       "jsr:@std/testing@^1.0.3",
-      "jsr:@tajpouria/cors@^1.2.1",
       "npm:@nestjs/common@^10.4.4",
       "npm:@nestjs/core@^10.4.4",
       "npm:@nestjs/platform-express@^10.4.4",

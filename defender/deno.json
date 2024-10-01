@@ -10,7 +10,6 @@
     "@std/expect": "jsr:@std/expect@^1.0.4",
     "@std/http": "jsr:@std/http@^1.0.7",
     "@std/testing": "jsr:@std/testing@^1.0.3",
-    "@tajpouria/cors": "jsr:@tajpouria/cors@^1.2.1",
     "@types/cookie-parser": "npm:@types/cookie-parser@^1.4.7",
     "cookie-parser": "npm:cookie-parser@^1.4.6"
   },
